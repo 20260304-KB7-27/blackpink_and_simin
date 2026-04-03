@@ -1,0 +1,47 @@
+<template>
+  <div class="simple-card" @click="goDetail">
+    <h5>{{ member.name }}</h5>
+    <div class="email"><i class="bi bi-envelope"></i>{{ member.role }}</div>
+    <div class="team"><i class="bi bi-people"></i>{{ member.mbti }}</div>
+  </div>
+</template>
+<script setup>
+import { useRouter } from 'vue-router';
+
+const props = defineProps({
+  member: {
+    type: Object,
+    required: true,
+  },
+});
+const router = useRouter();
+
+const goDetail = () => {
+  router.push(`/members/${props.member.id}`);
+};
+</script>
+
+<style scoped>
+.simple-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.simple-card:hover {
+  background-color: #f5f5f5;
+}
+.email {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.team {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+</style>
