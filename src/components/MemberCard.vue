@@ -1,5 +1,5 @@
 <template>
-  <div class="simple-card">
+  <div class="simple-card" @click="goDetail">
     <h5>{{ member.name }}</h5>
     <div class="email"><i class="bi bi-envelope"></i>{{ member.role }}</div>
     <div class="team"><i class="bi bi-people"></i>{{ member.mbti }}</div>
@@ -12,6 +12,10 @@ const props = defineProps({
     required: true,
   },
 });
+
+const goDetail = () => {
+  router.push(`/members/${props.student.id}`);
+};
 </script>
 
 <style scoped>
