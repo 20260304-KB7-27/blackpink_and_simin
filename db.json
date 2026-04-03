@@ -1,0 +1,85 @@
+{
+  "rules": [
+    {
+      "id": "1",
+      "rule": "점심 맛있게 잘 묵기"
+    },
+    {
+      "id": "2",
+      "rule": "사이좋게 지내기"
+    },
+    {
+      "id": "3",
+      "rule": "시민한테 떡볶이 강요 O "
+    },
+    {
+      "id": "4",
+      "rule": "팀 활동 적극적으로 참여하기!!!!! "
+    },
+    {
+      "id": "5",
+      "text": "하루에 슬랙에 5마디 이상 보내기 (전 50마디 정도하니까 걱정마세요)"
+    },
+    {
+      "id": "6",
+      "rule": "아침에 만나면 이름 부르며 상냥하게 눈을 맞추며 인사하기(눈 피하는 사람이 커피 쏘기)"
+    },
+    {
+      "id": "7",
+      "rule": "지각하지 않기!!!!!!!!!!"
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "우리는 블랙핑크 재한이는 그냥 시민",
+      "reason": "우리는 블랙핑크고 재한이는 그냥 시민이기 때문입니다.",
+      "teamImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62q_K5p5X91qq5FK-huyx1HfXuNLz1UHdolY0wJKxD5YVXG-3AkkhGZDNlkJSOam2HV8baOh-y2SOgsPsD0CXHjXR91FMATrqmljQF6ahsA&s=10"
+    }
+  ],
+  "members": [
+    {
+      "id": "1",
+      "name": "황현진",
+      "role": "제니",
+      "mbti": "ENFP",
+      "desc": "팀장답게……. 잘 해 보 겠 읍 니 다….."
+    },
+    {
+      "id": "2",
+      "name": "이채린",
+      "role": "로제",
+      "mbti": "ISTJ",
+      "desc": "잘 부탁 드려요 아좌좌 ^.^"
+    },
+    {
+      "id": "3",
+      "name": "김도현",
+      "role": "지수",
+      "mbti": "ISFP",
+      "desc": "잘 부탁드려용 열심히 할게요!"
+    },
+    {
+      "id": "4",
+      "name": "김혜진",
+      "role": "리사",
+      "mbti": "INFJ",
+      "desc": "화이팅!!!"
+    },
+    {
+      "id": "5",
+      "name": "장재한",
+      "role": "그냥시민",
+      "mbti": "ISTJ",
+      "desc": "27회차 취뽀 화이팅 !"
+    }
+  ],
+  "guestbook": [
+    {
+      "id": 1,
+      "name": "도도",
+      "message": "우리팀 멋쟁이~~",
+      "createdAt": "기록된 시간"
+    }
+  ]
+}
