@@ -11,6 +11,10 @@ const router = createRouter({
       path: '/rules',
       component: () => import('@/pages/TeamRule.vue'),
     },
+    {
+      path: '/team-introduce',
+      component: () => import('@/pages/TeamIntroduce.vue'),
+    }
   ],
 });
 
