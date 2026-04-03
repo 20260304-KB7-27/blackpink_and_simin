@@ -1,5 +1,6 @@
 # 🧑‍💻 팀 소개 페이지 프로젝트
-![우리는 블랙핑크 재한이는 그냥 시민](image.png)
+<img width="1408" height="768" alt="Gemini_Generated_Image_jtgqmwjtgqmwjtgq" src="https://github.com/user-attachments/assets/977da683-9d65-4251-813c-bbcc7dd4cb42" />
+
 
 ## 📌 1. 프로젝트 소개
 
