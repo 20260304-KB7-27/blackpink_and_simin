@@ -6,15 +6,18 @@
   </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router';
+
 const props = defineProps({
   member: {
     type: Object,
     required: true,
   },
 });
+const router = useRouter();
 
 const goDetail = () => {
-  router.push(`/members/${props.student.id}`);
+  router.push(`/members/${props.member.id}`);
 };
 </script>
 
