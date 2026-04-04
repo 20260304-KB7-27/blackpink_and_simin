@@ -1,35 +1,33 @@
 <template>
-  <div class="container mt-4" style="max-width: 600px">
-    <!-- 제목 + 버튼 -->
-    <div class="d-flex justify-content-between align-items-center mb-3">
+  <div class="px-4 mt-4">
+
+    <div class="d-flex justify-content-center align-items-center gap-5 mb-4">
       <h4 class="m-0">방명록</h4>
-      <button
-        class="btn btn-primary btn-sm"
-        v-if="!showForm"
-        @click="showForm = true"
-      >
-        추가
+      <button class="btn btn-primary btn-sm" v-if="!showForm" @click="showForm = true">
+        글 남기기
       </button>
     </div>
 
-    <!-- 작성 폼 -->
-    <AddGuestbook v-if="showForm" @close="showForm = false" />
-
-    <!-- 방명록 리스트 -->
-    <div>
-      <div
-        v-for="guestbook in guestbookList"
-        :key="guestbook.id"
-        class="list-group-item"
-      >
-        <GuestbookItem :guestbook="guestbook" />
-      </div>
+    <!-- 글 남기기 폼 -->
+    <div class="d-flex justify-content-center mb-4">
+      <AddGuestbook v-if="showForm" @close="showForm = false" />
     </div>
+
+    <!-- 포스트잇 목록 -->
+    <div class="d-flex flex-wrap gap-3">
+      <GuestbookItem
+          v-for="(item, index) in guestbookList"
+          :key="item.id"
+          :guestbook="item"
+          :index="index"
+      />
+    </div>
+
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref, provide } from 'vue';
+import { ref, provide, onMounted } from 'vue';
 import { getGuestbook, createGuestbook } from '@/utils/guestbook';
 import GuestbookItem from '@/components/GuestbookItem.vue';
 import AddGuestbook from '@/components/AddGuestbook.vue';
@@ -63,5 +61,3 @@ onMounted(() => {
   fetchGuestbook();
 });
 </script>
-
-<style lang="scss" scoped></style>

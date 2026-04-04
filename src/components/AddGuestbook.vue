@@ -1,45 +1,16 @@
 <template>
-  <div class="row">
-    <div class="col p-3">
-      <h2>방명록 작성</h2>
+  <div style="width: 400px">
+    <div class="form-group mb-2">
+      <label>이름</label>
+      <input type="text" class="form-control" v-model="form.name" />
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="form-group">
-        <label htmlFor="name">이름:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          v-model="guestbookItem.name"
-        />
-      </div>
-      <div class="form-group">
-        <label htmlFor="message">내용:</label>
-        <textarea
-          class="form-control"
-          rows="3"
-          id="message"
-          v-model="guestbookItem.message"
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <button
-          type="button"
-          class="btn btn-primary m-1"
-          @click="addGuestbookHandler"
-        >
-          추가
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary m-1"
-          @click="emit('close')"
-        >
-          취소
-        </button>
-      </div>
+    <div class="form-group mb-2">
+      <label>내용</label>
+      <textarea class="form-control" rows="3" v-model="form.message"></textarea>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-primary" @click="submit">추가</button>
+      <button class="btn btn-secondary" @click="emit('close')">취소</button>
     </div>
   </div>
 </template>
@@ -48,23 +19,19 @@
 import { reactive, inject } from 'vue';
 
 const addGuestbook = inject('addGuestbook');
-
 const emit = defineEmits(['close']);
 
 // 방명록 추가용
-const guestbookItem = reactive({
-  name: '',
-  message: '',
-});
+const form = reactive({ name: '', message: '' });
 
-// 방명록 추가 버튼 핸들러
-const addGuestbookHandler = () => {
-  // guestbookItem 값만 복사해서 전달
-  addGuestbook({ ...guestbookItem, createdAt: new Date().toISOString() });
+const submit = () => {
+  if (!form.name.trim() || !form.message.trim()) {
+    alert('이름과 내용을 입력해주세요.');
+    return;
+  }
 
-  // 닫기
+  // 값만 복사해서 전달
+  addGuestbook({ ...form, createdAt: new Date().toISOString() });
   emit('close');
 };
 </script>
-
-<style lang="scss" scoped></style>
