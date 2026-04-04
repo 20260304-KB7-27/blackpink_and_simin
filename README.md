@@ -1,38 +1,60 @@
-# .
+# 🧑‍💻 팀 소개 페이지 프로젝트
+<img width="1408" height="768" alt="Gemini_Generated_Image_jtgqmwjtgqmwjtgq" src="https://github.com/user-attachments/assets/977da683-9d65-4251-813c-bbcc7dd4cb42" />
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## 📌 1. 프로젝트 소개
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+본 프로젝트는 Vue.js와 JSON Server를 활용하여 팀을 소개하는 웹 페이지를 제작하는 것을 목표로 합니다.
 
-## Recommended Browser Setup
+<br/>
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🛠 2. 기술 스택
+- **Frontend:** Vue 3
+- **Backend:** JSON Server
 
-## Customize configuration
+Vue를 활용하여 컴포넌트 기반으로 UI를 구성하고,
+JSON Server를 통해 팀원 데이터 및 방명록 데이터를 관리합니다.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+<br/>
 
-## Project Setup
+## 👥 3. 팀원 및 역할 분담
+| 이름 | 담당         |
+| -- | ---------- |
+| 혜진 | 팀 규칙 페이지   |
+| 현진 | 팀 소개 페이지   |
+| 재한 | 팀원 리스트 페이지 |
+| 채린 | 팀원 소개 페이지  |
+| 도현 | 방명록 페이지    |
 
-```sh
-npm install
-```
+<br/>
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
+## 📄 4. 페이지 구성
+1) **팀 규칙 페이지** <br/>
+팀의 협업 방식 및 규칙 소개
+2) **팀 소개 페이지**<br/>
+팀에 대한 전반적인 소개
+팀명 및 팀명 의미 포함
+3) **팀원 리스트 페이지**<br/>
+전체 팀원 목록 확인
+4) **팀원 소개 페이지**<br/>
+팀장 및 팀원 개별 소개
+5) **방명록 페이지**<br/>
+자유롭게 메시지를 남길 수 있는 공간
 
-### Compile and Minify for Production
+<br/>
 
-```sh
-npm run build
-```
+## 🔧 5. Git 협업 방식
+### 📌 브랜치 전략
+기능 단위로 브랜치 생성
+feat/#이슈번호-기능명
+### 📌 커밋 규칙
+[#이슈번호] 타입: 작업 내용
+
+> 예시: [#7] docs: 팀 소개 페이지 README 작성
+### 📌 협업 흐름
+이슈 생성
+브랜치 생성
+기능 개발
+Pull Request 생성
+코드 리뷰 후 Merge
