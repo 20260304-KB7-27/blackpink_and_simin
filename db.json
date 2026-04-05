@@ -76,10 +76,10 @@
   ],
   "guestbook": [
     {
-      "id": 1,
+      "id": "1",
       "name": "도도",
       "message": "우리팀 멋쟁이~~",
-      "createdAt": "기록된 시간"
+      "createdAt": "2026-04-03T08:27:06.613Z"
     }
   ]
 }
